@@ -1,0 +1,21 @@
+plugins {
+    id 'java'
+}
+
+group 'jp.rouh'
+version '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    //Base32エンコーダ
+    implementation group: 'commons-codec', name: 'commons-codec', version: '1.15'
+
+    //QRコード画像生成
+    implementation group: 'com.google.zxing', name: 'core', version: '3.3.0'
+    implementation group: 'com.google.zxing', name: 'javase', version: '3.3.0'
+}
+
+tasks.withType(AbstractCompile)*.options*.encoding = tasks.withType(GroovyCompile)*.groovyOptions*.encoding = 'UTF-8'
