@@ -54,4 +54,26 @@ Authenticator 上で6桁のOTPが表示される(30秒ごとに更新される)
 * swing (javax.swing)
 * HMAC-SHA1 (javax.crypto)
 
+### ソースコード解説
 
+独自GUIフレームワーク部分(jp.rouh.totp.clientパッケージ)
+* Scene ... 画面の抽象クラス
+* SceneContext ... 画面遷移用コンテキスト
+* SceneId ... 画面ID enumクラス
+
+GUI部分(jp.rouh.totp.clientパッケージ)
+* Application ... アプリケーション(実行可能クラス)
+* LoginOtpScene ... OTPログイン画面
+* LoginScene ... ログイン画面
+* QRCodeScene ... QRコード表示画面
+* RegisterScene ... ユーザ登録画面
+* UserScene ... ユーザ情報画面
+
+モデル部分(jp.rouh.totp.modelパッケージ)
+* ApplicationService ... 画面から実行される処理のファサードインターフェース
+* ApplicationServiceImpl ... 上記インターフェースの標準実装クラス
+* SecurityUtils ... ハッシュやTOTP関連の処理をまとめたユーティリティクラス
+
+データ永続化(jp.rouh.totp.modelパッケージ)
+* DataManager ... データ永続化インターフェース
+* PropertyBasedDataManager ... プロパティによるデータ永続化の実装クラス
