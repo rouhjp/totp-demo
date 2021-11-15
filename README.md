@@ -13,23 +13,25 @@ TOTP(時間ベース・ワンタイムパスワード)を独自で実装し、
 
 ![ユーザ登録画面](./documents/screenshots/register.jpg)
 
-(3)QRコードを Google Authenticator で読み込む
+(3)QRコードが表示される
 
 ![QRコード画面](./documents/screenshots/qrcode.jpg)
 
-(4)Authenticator 上で6桁のOTPが表示される(30秒ごとに更新される)
+(4)Google Authenticator でQRコードを読み込む
+
+Authenticator 上で6桁のOTPが表示される(30秒ごとに更新される)
 
 ![Authenticator画面](./documents/screenshots/authenticator.jpg)
 
-(4)ログインする
+(5)ログインする
 
 ![ログイン画面](./documents/screenshots/login.jpg)
 
-(5)Authenticator に表示されたOTPを入力する
+(6)Authenticator に表示されたOTPを入力する
 
 ![OTPログイン画面](./documents/screenshots/otp.jpg)
 
-(6)ログインに成功する
+(7)ログインに成功する
 
 ![ログイン成功画面](./documents/screenshots/success.jpg)
 
