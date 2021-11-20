@@ -94,9 +94,9 @@ final class SecurityUtils {
                 .mapToObj(i -> binaryStringOf(digest[i]))
                 .collect(Collectors.joining());
         //正の値となるよう、先頭1ビットを0へ変更
-        long anchoredNumber = Long.parseLong("0".concat(anchoredNumberBinaryString.substring(1)), 2);
+        int anchoredNumber = Integer.parseInt("0".concat(anchoredNumberBinaryString.substring(1)), 2);
         //下6桁をOTPパスワードとして利用
-        long otp = anchoredNumber % 1_000_000;
+        int otp = anchoredNumber % 1_000_000;
         return String.format("%06d", otp);
     }
 
